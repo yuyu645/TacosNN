@@ -1,0 +1,232 @@
+*{
+    box-sizing: border-box;/*esto lo que hace es que el tamaño que le apliques no sele sume nada mas */
+}
+body {
+    margin: 0;
+    /*fuente de la letras*/
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*cambia de tamaño a los diferentes h*/
+h1 {
+    font-size: 3.5em;
+}
+h2 {
+    font-size: 2.7em;
+}
+h3 {
+    font-size: 2em;
+}
+p {
+    font-size: 1em;
+}
+button {
+    font-size: 1.5em;/*cambia de tamaño a la fuente de los botones*/
+    font-weight: bold;/*esto lo hace en negrita*/
+    padding: 10px 15px;/*espacio entre la letra y lo de mas del boton*/
+    border-radius: 12px;/*esto lo que hace es poner un borde mas redondeado al boton*/
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);/*esto lo que hace es poner un difuminado al fondo*/
+    color: white;
+    background-color: #A91D3A;
+}
+.colornuevo {
+    color: #A91D3A;
+}
+/*esto hace que cuando pasemos el cursor por el boton se ponga de diferente color entre otras cosas*/
+button:hover {
+    background-color: #6c1224;
+}
+/*esto lo qu hace es poner margenes para cuando llege a 1400px no se recorran mas*/
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+header {
+    background-color:rgb(245,245,245);
+}
+/*restablece el margen de el parrafo*/
+header .logo {
+    margin: 0;
+    padding: 22px 30px; /*agrega espacio primero arriba y abajo y el segundo de los lados*/
+    font-weight: bold;
+    color: #A91D3A;
+    font-size: 2em;
+}
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.3em;
+}
+header a {
+    padding: 5px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+header a:hover {
+    color: #A91D3A;
+}
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url(img/jeswin-thomas-z_PfaGzeN9E-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#sobrenosotros .container {
+    text-align: center;
+    padding: 200px 12px;
+}
+#catalogo {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+}
+#catalogo .container{
+    padding: 150px 12px;
+}
+#catalogo p {
+    display: none;
+}
+#catalogo h2 {
+    margin-top: 0;
+    font-size: 3.4em;
+}
+#catalogo .sobrelos-tacos {
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 15px;
+    border-radius: 20px;
+}
+.sobrelos-tacos:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url(img/krisztian-tabori-ZQf4jzkpz1k-unsplash\ \(1\).jpg);
+}
+
+.sobrelos-tacos:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url(img/xavier-crook-wIqpmuOloVA-unsplash.jpg);
+}
+.sobrelos-tacos:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url(img/we-the-creators-5mpht0M5H0E-unsplash.jpg);
+}
+/* Estilos para el pie de página */
+#pie-de-pagina {
+    text-align: center; /* Centra el texto dentro del pie de página */
+    background-color: #c05c70;
+  }
+  
+  /* Estilos para los iconos de redes sociales en el pie de página */
+  #pie-de-pagina .redes-iconos {
+    display: flex;         /* Utiliza Flexbox para alinear los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    text-align: center;    /* Centra el texto dentro de los iconos (si lo hay) */
+  }
+  
+  /* Estilo específico para el icono de Facebook */
+  .fa-facebook , .fa-whatsapp , .fa-instagram {
+    padding: 0 20px;
+    padding-bottom: 20px;   /* Añade un espacio de 20px a la izquierda y derecha del icono */
+    font-size: 1.5em;
+  } 
+  #pie-de-pagina h2 {
+    margin: 0;
+  }
+  @media (min-width: 720px) {
+     header {
+        position: fixed;
+        width: 100%;
+     }
+     header .container {
+        flex-direction: row;
+        justify-content: space-between;
+     }
+     header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+     }
+     #sobrenosotros .container {
+        display: flex;
+        justify-content: space-evenly;
+     }
+     #sobrenosotros .imagen-cont {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url(img/sebastian-coman-photography-cQbOSRpElxw-unsplash.jpg);
+        background-size: cover;
+        background-position: center center;
+        width: 450px;
+        height: 500px;
+        border-radius: 40px;
+     }
+     #sobrenosotros .texto {
+        width: 50%;
+        text-align: initial;
+        padding: 0px 40px;
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30px;
+     }
+     #sobrenosotros h2 {
+        margin: 0;
+     }
+     #catalogo .contenedor-demas {
+        display: flex;
+        justify-content: center;
+
+     }
+     #catalogo p {
+        display: block;
+        margin-bottom: 30px;
+     }
+     #catalogo h3 {
+        margin: 0;
+     }
+     #catalogo .sobrelos-tacos {
+        padding: 20px;
+     }
+
+  }
+  
